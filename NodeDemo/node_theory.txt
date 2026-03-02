@@ -1,0 +1,21 @@
+######## [REPL commands] #########
+
+[REPL: Read, Evaluate, Print, Loop]
+
+  REPL is a simple interactive programming environment that takes single user inputs, executes them, and returns the result to the user. It is commonly used for testing and debugging code snippets in real-time. In Node.js, you can access the REPL by simply typing `node` in your terminal without any arguments. This allows you to execute JavaScript code directly and see the results immediately.
+
+.break->  Sometimes you get stuck, this gets you out of the loop
+.clear    Alias for .break
+.editor   Enter editor mode
+.exit     Exit the REPL
+.help     Print this help message
+.load     Load JS from a file into the REPL session
+.save     Save all evaluated commands in this REPL  session to a file
+
+
+
+-----------------------------------------------------
+
+############## {EXPORT AND IMPORT} #############3
+
+! Suppose we have (A.js) file containing some functions and variables and we want to use that in some other file (B.js)  ==> write {require("A")} in B.js and we write {export syntax} in first file
