@@ -19,3 +19,24 @@
 ############## {EXPORT AND IMPORT} #############3
 
 ! Suppose we have (A.js) file containing some functions and variables and we want to use that in some other file (B.js)  ==> write {require("A")} in B.js and we write {export syntax} in first file
+
+
+
+################{WriteHead second parameter}####################
+
+####Content-Type--> defines the media type of the response content. 
+for example-->  res.setHeader('Content-Type','application/json') or 
+
+res.setHeader('Content-Type','text/html')
+res.setHeader('Content-Type','text/plain').
+
+
+
+####Cache-Control(Control Browsing Caching)--> controls how browser cache  the response
+
+
+####Content-Disposition (Force File Download)--> use to suggest a file download.
+
+####Cors Headers(cross-origin resource sharing)--. allows response to be accessed from different origins.
+
+for example->  res.setHeader('Access-Control-Allow-Origin','*'); ---> here * means we allow request from all domains.

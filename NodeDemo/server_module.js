@@ -8,16 +8,29 @@ const requestListener=function(request, response){
    const url=request.url;
    switch(url){
     case '/':
-        response.end("Welcome to the homepage!");
-        break;
+
+        response.write("<hr color='red' size='10'>"); // write method is used to write the response body, it can be called multiple times to send multiple pieces of data to the client.
+
+        response.write("<h1 align='center'>Welcome to the homepage!</h1>"); 
+
+        response.write("<hr color='green' size='10'>");
+        // end method is used to send the response back to the client and it also ends the response process.
+        response.end();
+                break;
+
     case '/about':
-        response.end("Welcome to the about page!");
+        response.writeHead(200, {'Content-Type': 'text/html'}); 
+        // writeHead method, it takes two parameters, first is status code and second is an object containing the headers. Status codes are used to indicate the status of the response.
+
+
+        response.end("<h1>Welcome to the about page!</h1>");
+        
         break;
-        case '/about':
-        response.end("Welcome to the contact page!");
+        case '/contact':
+        response.end("<h1>Welcome to the contact page!</h1>");
         break;
     default:
-        response.end("404 Not Found");
+        response.end("<h1>404 Not Found</h1>");
    }
 }
 
