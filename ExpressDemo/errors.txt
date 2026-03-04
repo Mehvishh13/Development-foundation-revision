@@ -1,0 +1,5 @@
+   <INFORMATION RELATED TO THE ERRORS IN EXPRESS >
+
+1.  Cannot GET /user ----> 
+👉 Browser sent a GET request to /user
+👉 But your server does not have any GET route for /user

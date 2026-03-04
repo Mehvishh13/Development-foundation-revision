@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+</head>
+<body>
+    <hr color="pink" size="10">
+    <h1 align="center">ADMIN PAGE!!</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia quod quos sapiente. Natus ut dolores, provident pariatur amet incidunt veniam dolor consequuntur hic commodi suscipit. Sunt provident minus rem magni aliquam illum qui corrupti facere a voluptas cumque, laborum maxime beatae accusamus dignissimos quo perferendis ab, harum nesciunt corporis! Nulla, labore, architecto sed blanditiis autem doloremque alias placeat debitis similique, quasi consequatur cum ad rerum!</p>
+
+    <h3 align="center">Welcome, <%= name %> (Age: <%= age %>)</h3>
+    <hr color="pink" size="10">
+
+
+
+    <% const isAdmin=true %>
+    <% if(isAdmin){ 
+        %>
+        <h3 align="center">You are an admin!</h3>
+        <%
+    } else {
+        %>
+        <h3 align="center">You are not an admin!</h3>
+        <%
+    }
+%>
+
+
+</body>
+</html>

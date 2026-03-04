@@ -1,4 +1,7 @@
 const express=require('express')
+const adminRoute=require("./Routes/adminRoute")
+const userRoute=require("./Routes/userRoutes")
+
 const app=express();
 
 const PORT=8000
@@ -10,11 +13,25 @@ const HOSTNAME="localhost"
 
 // route handler takes two parameters, first is request object and second is response object.
 
+app.set('view engine','ejs');
+
+//localhost:8000/admin --> if request will come to this route then adminRoute will handle the request and response.
+app.use("/admin",adminRoute);
+
+
+//localhost:8000/user --> if request will come to this route then userRoute will handle the request and response.
+app.use("/user",userRoute);
+ 
+
+//localhost:8000/
 app.get('/',(req,res)=>{
     console.log("helloooo..");
-    res.send("<h1 align='center'>Welcome to the homepage!</h1>");
+    res.render('default'); // render method is used to render the view file, here we are rendering default.ejs file which is present in views folder.
 })
 
+
+
+//localhost:8000/about
 app.get("/about",(req,res)=>{
     res.send("<h1 align='center'>Welcome to the about page!</h1>");
 })
@@ -22,7 +39,7 @@ app.get("/about",(req,res)=>{
 app.get("/contact",(req,res)=>{
     res.send("<h1 align='center'>Welcome to the contact page!</h1>");})
 
-
+//localhost:8000/ , methodname is POST
 app.post("/",(req,res)=>{
     res.send("<h1 align='center'>This is a post request!</h1>");
 })
