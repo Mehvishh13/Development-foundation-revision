@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <hr color="pink" size="10">
+    <h1 align="center">ADMIN HOME PAGE!!</h1>
+    <hr color="pink" size="10">
+
+<% const fruitname=["Apple", "Banana", "Orange"]%>
+
+<% let count=0%>
+
+<ul>
+<% while (count<fruitname.length) { %>
+    <li><%= fruitname[count] %></li>
+    <% count++ %>
+<% } %>
+</ul>
+
+
+
+<ol>
+
+    fruitname.forEach((fruit) => {
+        %>
+        <li><%= fruit %></li>
+        <%
+    });
+
+</ol>
+
+
+
+    <%=temp %>  
+
+    
+    <%- temp %>  
+</body>
+</html>

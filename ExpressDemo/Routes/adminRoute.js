@@ -14,7 +14,13 @@ router.get('/',(req,res)=>{
 })
 
 router.get('/home',(req,res)=>{
-    res.send("<h1 align='center'>Welcome to the admin home page!</h1>");
+    // res.send("<h1 align='center'>Welcome to the admin home page!</h1>");
+
+
+    const temp= "<p style='color: yellow; padding: 10px;'>This is a paragraph from admin home page!</p>";
+
+
+    res.render('adminHome',{temp:temp});
 })
 
 
