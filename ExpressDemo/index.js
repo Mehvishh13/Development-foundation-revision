@@ -1,4 +1,5 @@
 const express=require('express')
+const path=require('path')
 const adminRoute=require("./Routes/adminRoute")
 const userRoute=require("./Routes/userRoutes")
 
@@ -14,6 +15,13 @@ const HOSTNAME="localhost"
 // route handler takes two parameters, first is request object and second is response object.
 
 app.set('view engine','ejs');
+app.use(express.urlencoded({extended:true})); // this line is used to parse the form data which is sent from the client side, here we are using urlencoded method to parse the form data and extended:true is used to allow nested objects in the form data.
+
+app.use('/public', express.static(path.join(__dirname, 'public')));
+ // this line is used to serve static files from the public folder, here we are serving static files from public folder which is present in the root directory of the project.
+
+
+
 
 //localhost:8000/admin --> if request will come to this route then adminRoute will handle the request and response.
 app.use("/admin",adminRoute);
@@ -21,6 +29,7 @@ app.use("/admin",adminRoute);
 
 //localhost:8000/user --> if request will come to this route then userRoute will handle the request and response.
 app.use("/user",userRoute);
+
  
 
 //localhost:8000/

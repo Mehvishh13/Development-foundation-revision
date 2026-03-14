@@ -1,0 +1,38 @@
+<%- include('../partials/header.ejs') %>
+<%- include('./nav.ejs')%>
+<%- include('./carousel.ejs') %>
+
+<section>
+
+    <table class="table table-bordererd table-striped table-hover">
+        <thead class="table-dark" >
+        <tr>
+            <th>USER ID</th>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th>GENDER</th>
+            <th>DEPARTMENT</th>
+        </tr>
+        </thead>
+        <tbody>
+            <% userData.forEach((user) => { %>
+                <tr>
+                    <td><%= user.userId %></td>
+                    <td><%= user.username %></td>
+                    <td><%= user.userEmail %></td>
+                    <td><%= user.userGender %></td>
+                    <td><%= user.userDept %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+
+        <tfoot>
+        <tr>
+            <td colspan="6">TABLE DISPLAYED</td>
+        </tfoot>
+    </table>
+</section>
+
+
+
+<%- include('../partials/footer.ejs') %>

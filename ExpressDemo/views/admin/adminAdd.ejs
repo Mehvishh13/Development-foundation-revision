@@ -1,0 +1,33 @@
+<%- include('../partials/header.ejs') %>
+<%- include('./nav.ejs')%>
+<section>
+    <form method="post" >
+    <table class="table table-bordered w-50 mx-auto mt-5 table-dark text-center">
+
+        <tbody>
+            <tr>
+                <td>User Name</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="email" name="userEmail"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" name="userPassword">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" name="addUser" value="Add User">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    </form>
+</section>
+
+
+<%- include('../partials/footer.ejs') %>

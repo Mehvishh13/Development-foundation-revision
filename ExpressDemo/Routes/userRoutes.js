@@ -4,7 +4,7 @@ const router=express.Router();
 
 
 //localhost:8000/user
-router.get('/user', (req, res) => {
+router.get('/', (req, res) => {
    res.send("User Page");
 });
 

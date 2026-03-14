@@ -11,9 +11,9 @@
     <h1 align="center">ADMIN HOME PAGE!!</h1>
     <hr color="pink" size="10">
 
-<% const fruitname=["Apple", "Banana", "Orange"]%>
+<% const fruitname=["Apple", "Banana", "Orange"] %>
 
-<% let count=0%>
+<% let count=0 %>
 
 <ul>
 <% while (count<fruitname.length) { %>
@@ -25,12 +25,13 @@
 
 
 <ol>
-
+<%
     fruitname.forEach((fruit) => {
         %>
         <li><%= fruit %></li>
         <%
     });
+    %>
 
 </ol>
 
